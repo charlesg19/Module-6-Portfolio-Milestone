@@ -67,7 +67,7 @@ class ShoppingCart:
     def print_total(self):
         total_cart_item_quantity = 0
         total_cart_cost = 0
-        print(self.customer_name, "'s Shopping Cart - ", self.current_date)
+        print("{}'s Shopping Cart - {}".format(self.customer_name, self.current_date))
         for items in self.cart_items:
             total_cart_item_quantity += items.item_quantity
         print("Number of Items:", total_cart_item_quantity)
@@ -82,7 +82,7 @@ class ShoppingCart:
         print("Total: ${:.2f}".format(total_cart_cost))
 
     def print_description(self):
-        print(self.customer_name, "'s Shopping Cart - ", self.current_date)
+        print("{}'s Shopping Cart - {}".format(self.customer_name, self.current_date))
         print("Item Descriptions")
         for items in self.cart_items:
             print("{}: {}".format(items.item_name, items.item_description))
@@ -120,7 +120,7 @@ m - Modify Item
 i - Output items' descriptions
 o - Output shopping cart
 q - Quit""")
-        selection = input("Choose an option:")
+        selection = input("Choose an option: ")
         while selection != "q":
             if selection == "a":
                 print("Items that can be added to the cart: {}, {}".format(item1.item_name, item2.item_name))
@@ -154,7 +154,7 @@ q - Quit""")
                 x.print_total()
 
             else:
-                print("eneter a good selectioioion")
+                print("Enter a valid selection")
 
             selection = input("Choose an option:")
 
